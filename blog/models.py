@@ -5,5 +5,5 @@ from django.db import models
 class Blog(models.Model):
     title = models.CharField(max_length=250)
     text = models.CharField(max_length=300)
-    created_date = models.DateTimeField()
-    uploaded_date = models.DateTimeField()
+    created_date = models.DateTimeField(auto_now_add=True, verbose_name='Создана')
+    uploaded_date = models.DateTimeField(auto_now_add=True, verbose_name='Загружена')
